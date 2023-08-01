@@ -2,7 +2,8 @@ import './App.css';
 import Header from './components/Header.js';
 import Menu from './components/Menu.js';
 import Content from './components/Content';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavbarDesigne';
+import NavbarDesigne from './components/NavbarDesigne';
 
 function App() {
   return (
@@ -10,7 +11,6 @@ function App() {
       <Header/>
       <Menu/>
       <Content/>
-      <Navbar/>
     </div>
   );
 };

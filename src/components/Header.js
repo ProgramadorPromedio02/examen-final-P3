@@ -1,10 +1,11 @@
-import Navbar from "./Navbar";
+import Navbar from "./NavbarDesigne";
 import Footer from "./Footer";
+import NavbarDesigne from "./NavbarDesigne";
 
 function Header() {
     return (
       <div>
-        <Navbar/>
+        <NavbarDesigne/>
         <Footer/>
       </div>
     );
