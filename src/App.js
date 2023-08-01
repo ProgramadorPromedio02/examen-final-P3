@@ -8,7 +8,7 @@ import NavbarDesigne from './components/NavbarDesigne';
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header props="PROGRAMACIÓN III(EXAMEN FINAL)"/>
       <Menu/>
       <Content/>
     </div>

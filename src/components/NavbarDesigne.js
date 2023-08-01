@@ -5,11 +5,11 @@ function NavbarDesigne() {
   return (
     <Navbar bg="primary">
       <Container className="text-light">
-        <Navbar.Brand classname="text-light" href="#home">Presentación</Navbar.Brand>
+        <Navbar.Brand className="text-light" href="#home">Presentación</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Login: <a href="#login">Gonzalo</a>
+          <Navbar.Text className="text-light">
+            Login: <a href="#login" className="text-light">Gonzalo</a>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
