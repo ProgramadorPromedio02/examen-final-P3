@@ -1,17 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header.js';
-import Menu from './components/Menu.js';
-import Content from './components/Content';
-import Navbar from './components/NavbarDesigne';
-import NavbarDesigne from './components/NavbarDesigne';
+import ScreenHome from "../src/screen/ScreenHome";
+import ScreenLogin from "../src/screen/ScreenLogin";
+import ScreenRegister from "../src/screen/ScreenRegister";
+import ScreenError from "../src/screen/ScreenError";
+import ScreenVideogames from "../src/screen/ScreenVideogames";
 
 function App() {
   return (
-    <div className="App">
-      <Header props="PROGRAMACIÓN III(EXAMEN FINAL)"/>
-      <Menu/>
-      <Content/>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ScreenHome/>}/>
+          <Route path="/login" element={<ScreenLogin/>}/>
+          <Route path="/register" element={<ScreenRegister/>}/>
+          <Route path="/error" element={<ScreenError/>}/>
+          <Route path="/Videogames" element={<ScreenVideogames/>}/>          
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 

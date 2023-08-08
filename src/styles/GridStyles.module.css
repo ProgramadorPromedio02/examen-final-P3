@@ -3,6 +3,7 @@
   margin: 0 !important;
   padding: 1 !important;
   margin-right: 0 !important;
+  background-color: rgb(111, 197, 231);
   grid-auto-columns: auto;
   grid-auto-rows: 1fr;
   grid-template-columns: 100%;
@@ -40,7 +41,7 @@
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "sidebarConteiner";
+    "descriptionConteiner sidebarConteiner";
   grid-area: contentConteiner;
   margin: 0px;
   padding: 0px; 
