@@ -1,13 +1,12 @@
 import Grid from "../components/Grid";
-import CarouselHeader from "../components/CarouselHeader";
 import Content from "../components/Content";
-import Sidebar from "../components/SideBar";
-import Header from "../components/Header";
+import SideBar from "../components/SideBar";
+import CarouselHeader from "../components/CarouselHeader";
 
 function ScreenHome () {
     return (
         <div>
-            <Grid title={<Header/>} header={<CarouselHeader/>} content={<Content/>} sidebar={<Sidebar/>}/>
+            <Grid header={<CarouselHeader/>} content={<Content/>} lateral={<SideBar/>}  />
         </div>
     );
 };

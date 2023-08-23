@@ -2,29 +2,32 @@ import styles from "../styles/GridStyles.module.css";
 import Footer from "./Footer";
 import NavbarDesigne from "./NavbarDesigne";
 
-function Grid({ header, content, sidebar, title } ) {
+function Grid({ header, content, lateral }) {
   return (
+
     <div className={styles["conteinerClass"]}>
+      {/* section 1*/}
       <div className={styles["navbarConteiner"]}>
         <NavbarDesigne />
       </div>
+      {/* section 2*/}
       <div className={styles["headerConteiner"]}>
-        {title}
         {header}
       </div>
+      {/* section 3*/}
       <div className={styles["contentConteiner"]}>
-        <div className={styles["descriptionConteiner"]}>
-          {content}
-        </div>
-        <div className={styles["sidebarConteiner"]}>
-          {sidebar}
-        </div>
+        {content}
       </div>
+      {/* section 4*/}
+      <div className={styles["lateralConteiner"]}>
+        {lateral}
+      </div>
+      {/* section 5*/}
       <div className={styles["footerConteiner"]}>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
 };
 
-export default Grid;
+export default Grid;
