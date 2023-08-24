@@ -27,8 +27,8 @@ export default function WeatherComponent() {
   }
   const {name,weather,main} = climadata;
   return (
-    <div>
-      <h2>Clima en: {name}</h2>
+    <div className="text-center m-1 p-1">
+      <h6><strong>Clima en:</strong> {name}</h6>
       <div>
         <strong>Clima Actual: </strong>
         {weather[0].description}

@@ -4,9 +4,9 @@ import styles from "../styles/Content.module.css";
 
 function Content() {
   return (
-    <div>
+    <div className="m-2">
       <Container>
-        <Row className="d-flex flex-column m-2 p-2">
+        <Row className="d-flex flex-column m-1 p-1">
           <Col className="text-center">
             <h1>CÓMO ENTENDER LA PROGRAMACIÓN</h1>
           </Col>

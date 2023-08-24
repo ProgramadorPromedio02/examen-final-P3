@@ -1,0 +1,15 @@
+.table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-left: 20px;
+}
+
+/* Estilos de las tarjetas (cards) */
+.card {
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+    font-size: 12px;
+}

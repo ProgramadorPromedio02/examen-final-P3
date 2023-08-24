@@ -13,8 +13,8 @@ function SideBar() {
   return (
     <div>
       <CustomCard content={
-        <div className="text-center m-2 p-2 ">
-          <h3>Para la realización de está página, se uso:</h3>
+        <div className="text-center m-1 p-1 ">
+          <h6>Para la realización de está página, se uso:</h6>
           <ul>
             {
               lenguajes.map((lenguaje) => (
@@ -27,8 +27,8 @@ function SideBar() {
         </div>
       } />
       <CustomCard content={
-        <div className="text-center m-2 p-2 ">
-          <h3>Algunas de nuestras recomendaciones para un Setup profesional</h3>
+        <div className="text-center m-1 p-1 ">
+          <h6>Algunas de nuestras recomendaciones para un Setup profesional</h6>
           <Link to="/videogames" className=" m-2 "><button type="submit" className="btn btn-primary m-2 ">Ir a la Tienda</button></Link>
         </div>
       } />

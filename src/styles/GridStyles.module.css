@@ -4,9 +4,10 @@
     'header header'
     'content lateral'
     'footer footer';
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
   background-color: rgb(111, 197, 231);
+  width: 1fr;
 
 }
 
@@ -22,13 +23,14 @@
 
 .contentConteiner {
   grid-area: content;
-  height: 80%;
   margin: 0;
-  padding: 0;
+  padding: 5px;
 }
 
 .lateralConteiner {
   grid-area: lateral;
+  display: flex;
+  justify-content: center;
 }
 
 .footerConteiner {
