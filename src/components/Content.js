@@ -1,11 +1,12 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
 import studying from "../img/studying.png";
 import styles from "../styles/Content.module.css";
+import { Link } from "react-router-dom";
 
 function Content() {
   return (
     <div className="m-2">
-      <Container>
+      <Container >
         <Row className="d-flex flex-column m-1 p-1">
           <Col className="text-center">
             <h1>CÓMO ENTENDER LA PROGRAMACIÓN</h1>
@@ -40,7 +41,7 @@ function Content() {
             </ul>
             <br/>
             <br/>
-            <span>Ya que sabes cómo aprender programación desde cero, el siguiente paso será el <a href="#">Full Stack Jr. Bootcamp</a>, en menos de 4 meses serás capaz de desarrollar un pensamiento computacional mientras te inicias en las metodologías y claves para escribir un código útil, rápido y elegante con Python. ¡Anímate y empieza a programar!</span>
+            <span>Ya que sabes cómo aprender programación desde cero, el siguiente paso será el <Link to="/Videogames">Full Stack Jr. Bootcamp</Link>, en menos de 4 meses serás capaz de desarrollar un pensamiento computacional mientras te inicias en las metodologías y claves para escribir un código útil, rápido y elegante con Python. ¡Anímate y empieza a programar!</span>
           </Col>
         </Row>
       </Container>
@@ -48,4 +49,4 @@ function Content() {
   );
 };
 
-export default Content;
+export default Content;

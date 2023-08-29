@@ -1,31 +1,42 @@
-import React from 'react'
-import CustomCard from "../components/CustomCard";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styles from "../styles/ContentTwo.module.css";
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 export default function ContentTwo() {
+  const [products, setProducts] = useState([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    axios.get("https://fakestoreapi.com/products/category/electronics")
+      .then(response => {
+        setProducts(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
-    <>
-      <div className={styles["table"]}>
-        <CustomCard content={
-          <div className={styles["card"]}>
-            <h4>Nombre</h4>
-            <span><strong>Marca:</strong> marca</span>
-            <br/>
-            <span><strong>Modelo:</strong> modelo</span>
-            <br/>
-            <span><strong>Procesador:</strong> procesador</span>
-            <br/>
-            <span><strong>Disco Duro:</strong> disco duro</span>
-            <br/>
-            <span><strong>RAM:</strong> ram</span>
-            <br/>
-            <span><strong>Precio: $</strong> 000</span>
-            <br/>
-            <Link to="/error"><button className='btn btn-primary'>Comprar</button></Link>
+    <div className={styles.table}>
+      {products.map(product => (
+        <div key={product.id} className={styles.card}>
+          <div className={styles["card-image"]}>
+            <img src={product.image} alt={product.title} className={styles.productImage} />
           </div>
-        }/>
-      </div>
-    </>
+          <div className={styles["category"]}> Descripcion </div>
+          <div className={styles["heading"]}>
+            <div className={`d-flex flex-column align-items-center ${styles['author']}`}>
+              <span className={styles["name"]}>{product.title}</span><br />
+              <span className={styles["productPrice"]}><strong>$ {product.price}</strong></span><br />
+              <Button variant="primary" onClick={() => navigate('/error')}>Ver Mas</Button>
+            </div>
+          </div>
+        </div>
+
+      ))}
+    </div>
   );
-};
+}
