@@ -1,15 +1,28 @@
 .studying-img {
-    width: 600px;
-    height: 400px;
+    width: 550px;
+    height: 350px;
     margin-bottom: 10px;
-};
+}
 
-
-
-/* lista renderizada de pagina home */
 .custom-list {
     list-style: none !important;
     list-style-type: none !important;
     padding: 0;
-    margin: 0;
+    margin: 0;
+}
+
+@media (max-width: 1400px) {
+    .studying-img {
+        width: 500px;
+        height: 300px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 900px) {
+    .studying-img {
+        width: 400px;
+        height: 250px;
+        margin-bottom: 5px;
+    }
 }

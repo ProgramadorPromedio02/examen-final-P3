@@ -1,6 +1,6 @@
 .custom-card {
   position: relative;
-  width: 16.5em;
+  width: 14.5em;
   height: 15.5em;
   border-radius: 14px;
   z-index: 1111;
@@ -9,21 +9,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  margin: 20px;
+  margin-left: 22px;
 }
 
 .bg {
   position: absolute;
   top: 5px;
   left: 5px;
-  width: 16em;
-  height: 15.5em;
+  width: 14em;
+  height: 15em;
   z-index: 2;
   background: rgba(40, 139, 252, 0.95);
   backdrop-filter: blur(24px);
   border-radius: 10px;
   overflow: hidden;
-  outline: 2px solid white;
+  outline: 2px solid  rgba(40, 139, 252, 0.95);
   padding: 5px;
 }
 
@@ -32,8 +33,8 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 16em;
-  height: 15.5em;
+  width: 14em;
+  height: 15em;
   border-radius: 50%;
   background-color: #003cff;
   opacity: 1;
@@ -60,5 +61,67 @@
 
   100% {
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 1400px) {
+  .custom-card {
+    width: 14em;
+    height: 15em;
+  }
+
+  .bg {
+    width: 13.5em;
+    height: 14.5em;
+  }
+
+  .blob {
+    width: 13em;
+    height: 12em;
+  }
+}
+
+@media (max-width: 900px) {
+  .container-sidebar {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 2em;
+  }
+
+  .custom-card {
+    width: 13.5em;
+    height: 12.5em;
+  }
+
+  .bg {
+    width: 13em;
+    height: 12.5em;
+  }
+
+  .blob {
+    width: 13em;
+    height: 12.5em;
+  }
+}
+@media (max-width: 500px) {
+  .container-sidebar {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 1em;
+  }
+
+  .custom-card {
+    width: 12.5em;
+    height: 11.5em;
+  }
+
+  .bg {
+    width: 12em;
+    height: 11.5em;
+  }
+
+  .blob {
+    width: 12em;
+    height: 11.5em;
   }
 }

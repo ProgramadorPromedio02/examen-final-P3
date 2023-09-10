@@ -53,7 +53,7 @@ function ScreenRegister() {
       alert("Hubo un error en el registro.");
     }
   };
-  
+
   const modalTitle = RegisterSuccess ? "Registro Exitoso" : "Registro Incorrecto";
   const modalMessage = RegisterSuccess ? "Nuevo usuario registrado con exito. ¿Quieres ir a iniciar sesión?" : "Fallo el registro del usuario. Por favor, inténtelo nuevamente.";
 
@@ -63,8 +63,11 @@ function ScreenRegister() {
         content={
           <Container>
             <Row className="d-flex flex-column">
+              <Col>
+                <Link to="/" ><button className="btn btn-primary m-1">Volver Inicio</button></Link>
+              </Col>
               <Col className="text-center">
-                <h1>Register</h1>
+                <h3>Register</h3>
                 <Image src={logo} className={styles["dimensiones-logo"]} />
               </Col>
               <br />
@@ -110,54 +113,50 @@ function ScreenRegister() {
                       Check me out
                     </label>
                   </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary m-2"
-                  >
-                    Registrarse
-                  </button>
                 </form>
               </Col>
               <Col className="d-flex m-2 p-2">
                 <Link to="/login" className=" m-2 ">
                   Iniciar Sesión
                 </Link>
+                <button type="submit" className="btn btn-primary m-2" onClick={handleRegister}>Registrarse</button>
+
               </Col>
             </Row>
             {showModal && (
-            <div
-              className="modal show"
+              <div
+                className="modal show"
 
-              style={{
-                display: 'block',
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                zIndex: 1050,
-              }}
-            >
-              <Modal.Dialog>
-                <Modal.Header closeButton>
-                  <Modal.Title>{modalTitle}</Modal.Title>
-                </Modal.Header>
+                style={{
+                  display: 'block',
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  zIndex: 1050,
+                }}
+              >
+                <Modal.Dialog>
+                  <Modal.Header closeButton>
+                    <Modal.Title>{modalTitle}</Modal.Title>
+                  </Modal.Header>
 
-                <Modal.Body>
-                  <p>{modalMessage}</p>
-                </Modal.Body>
+                  <Modal.Body>
+                    <p>{modalMessage}</p>
+                  </Modal.Body>
 
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
-                  {RegisterSuccess ? (
-                    <Button variant="primary" onClick={() => navigate('/login')}>Login</Button>
-                  ) : (
-                    <Button variant="primary" onClick={() => setShowModal(false)}>OK</Button>
-                  )}
-                </Modal.Footer>
-              </Modal.Dialog>
-            </div>
-          )}
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
+                    {RegisterSuccess ? (
+                      <Button variant="primary" onClick={() => navigate('/login')}>Login</Button>
+                    ) : (
+                      <Button variant="primary" onClick={() => setShowModal(false)}>OK</Button>
+                    )}
+                  </Modal.Footer>
+                </Modal.Dialog>
+              </div>
+            )}
           </Container>
         }
       />
@@ -165,4 +164,4 @@ function ScreenRegister() {
   );
 }
 
-export default ScreenRegister;
+export default ScreenRegister;

@@ -6,7 +6,7 @@ function Footer() {
     return (
       <footer>
         <Container>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center mt-1">
             <Col xs={12} className="text-center">
               <Image src={logo} alt="Mi Logotipo" className={styles["logo-dimensiones"]}/>
               <p>TODOS LOS DERECHOS RESERVADOS ME PERTENECEN &copy; {new Date().getFullYear()}</p>

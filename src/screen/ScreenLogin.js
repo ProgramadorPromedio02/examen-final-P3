@@ -10,11 +10,11 @@ function ScreenLogin() {
   const [username, setUsername] = useState("");
   const [passUser, setPassUser] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [loginSuccess, setLoginSuccess] = useState(false); 
+  const [loginSuccess, setLoginSuccess] = useState(false);
 
   const navigate = useNavigate();
 
-    const handleLogin = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
@@ -34,7 +34,6 @@ function ScreenLogin() {
       if (response.status === 200) {
         setLoginSuccess(true);
         setShowModal(true);
-        // Store login data in localStorage
         localStorage.setItem("loggedInUser", JSON.stringify(response.data));
       } else {
         setLoginSuccess(false);
@@ -52,8 +51,11 @@ function ScreenLogin() {
       <CardForm content={
         <Container>
           <Row className="d-flex flex-column">
+            <Col>
+              <Link to="/" ><button className="btn btn-primary m-1">Volver Inicio</button></Link>
+            </Col>
             <Col className="text-center">
-              <h1>Login</h1>
+              <h3>Login</h3>
               <Image src={logo} className={styles["dimensiones-logo"]} />
             </Col>
             <br />
@@ -118,4 +120,4 @@ function ScreenLogin() {
   );
 };
 
-export default ScreenLogin;
+export default ScreenLogin;

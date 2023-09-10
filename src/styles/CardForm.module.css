@@ -1,7 +1,7 @@
 .custom-card {
     position: relative;
     width: 40.5em;
-    height: 40em;
+    height: 33em;
     border-radius: 14px;
     z-index: 1111;
     overflow: hidden;
@@ -17,13 +17,14 @@
     top: 5px;
     left: 5px;
     width: 40em;
-    height: 39.5em;
+    height: 32.5em;
     z-index: 2;
     background: rgba(255, 255, 255, .95);
     backdrop-filter: blur(24px);
     border-radius: 10px;
     overflow: hidden;
     outline: 2px solid white;
+    font-size: auto;
 }
 
 .blob {
@@ -31,8 +32,8 @@
     z-index: 1;
     top: 50%;
     left: 50%;
-    width: 40em;
-    height: 39.5em;
+    width: 30em;
+    height: 29.5em;
     border-radius: 50%;
     background-color: #9900ff;
     opacity: 1;
@@ -59,5 +60,41 @@
 
     100% {
         transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 850px) {
+    .custom-card {
+        width: 30.5em;
+        height: 29em;
+    }
+
+    .bg {
+        width: 30em;
+        height: 28.5em;
+        padding-right: 10px;
+    }
+
+    .blob {
+        width: 20em;
+        height: 19.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .custom-card {
+        width: 18.5em;
+        height: 29em;
+    }
+
+    .bg {
+        width: 18em;
+        height: 28.5em;
+        padding-right: 10px;
+    }
+
+    .blob {
+        width: 10em;
+        height: 20em;
     }
 }

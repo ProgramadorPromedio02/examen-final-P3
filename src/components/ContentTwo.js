@@ -31,6 +31,10 @@ export default function ContentTwo() {
             <div className={`d-flex flex-column align-items-center ${styles['author']}`}>
               <span className={styles["name"]}>{product.title}</span><br />
               <span className={styles["productPrice"]}><strong>$ {product.price}</strong></span><br />
+              <span className={styles["name"]}>
+                {product.rating.rate < 3 ? "👎" : "👍"} {product.rating.rate}
+              </span>
+              <br />
               <Button variant="primary" onClick={() => navigate('/error')}>Ver Mas</Button>
             </div>
           </div>

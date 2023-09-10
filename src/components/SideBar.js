@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CustomCard from "./CustomCard";
 import WeatherComponent from './WeatherComponent';
+import style from '../styles/CustomCard.module.css'
 
 function SideBar() {
   const lenguajes = [
@@ -11,7 +12,7 @@ function SideBar() {
     { id: 5, nombre: 'CSS', visto: true }
   ];
   return (
-    <div>
+    <div className={style["container-sidebar"]}>
       <CustomCard content={
         <div className="text-center m-1 p-1 ">
           <h6>Para la realización de está página, se uso:</h6>
