@@ -11,6 +11,10 @@
     margin: 0;
 }
 
+.container-sidebar {
+    width: auto;
+}
+
 @media (max-width: 1400px) {
     .studying-img {
         width: 500px;
@@ -18,11 +22,20 @@
         margin-bottom: 5px;
     }
 }
+@media (max-width: 1200px) {
+    .studying-img {
+        width: 480px;
+        height: 280px;
+    }
+}
 
 @media (max-width: 900px) {
     .studying-img {
         width: 400px;
         height: 250px;
-        margin-bottom: 5px;
+    }
+    .container-sidebar {
+        display: flex;
+        flex-wrap: wrap;
     }
 }

@@ -28,6 +28,13 @@
   padding: 5px;
 }
 
+.bg h6{
+  font-size: 1em;
+}
+.bg strong, span, li{
+  font-size: .6em;
+}
+
 .blob {
   position: absolute;
   z-index: 1;
@@ -66,62 +73,82 @@
 
 @media (max-width: 1400px) {
   .custom-card {
-    width: 14em;
-    height: 15em;
-  }
-
-  .bg {
     width: 13.5em;
-    height: 14.5em;
+    height: 14em;
   }
-
-  .blob {
+  .bg {
     width: 13em;
-    height: 12em;
+    height: 13.5em;
+  }
+  .bg h6{
+    font-size: 1.2em;
+  }
+  .bg strong, span, li{
+    font-size: .9em;
+  }
+  .blob {
+    width: 12.5em;
+    height: 12.5em;
+  }
+}
+@media (max-width: 1200px) {
+  .custom-card {
+    width: 12.5em;
+    height: 13em;
+  }
+  .bg {
+    width: 12em;
+    height: 12.5em;
+  }
+  .bg h6{
+    font-size: 1.1em;
+  }
+  .bg strong, span, li{
+    font-size: .8em;
+  }
+  .blob {
+    width: 11.5em;
+    height: 11.5em;
   }
 }
 
 @media (max-width: 900px) {
-  .container-sidebar {
-    display:flex;
-    flex-wrap: wrap;
-    margin: 2em;
-  }
-
   .custom-card {
-    width: 13.5em;
-    height: 12.5em;
+    width: 12.5em;
+    height: 13em;
   }
-
   .bg {
-    width: 13em;
+    width: 12em;
     height: 12.5em;
   }
-
+  .bg h6{
+    font-size: 1.2em;
+  }
+  .bg strong, span, li{
+    font-size: .9em;
+  }
   .blob {
-    width: 13em;
+    width: 12em;
     height: 12.5em;
   }
 }
-@media (max-width: 500px) {
-  .container-sidebar {
-    display:flex;
-    flex-wrap: wrap;
-    margin: 1em;
-  }
-
+@media (max-width: 600px) {
   .custom-card {
-    width: 12.5em;
-    height: 11.5em;
+    width: 10.5em;
+    height: 13em;
   }
-
   .bg {
-    width: 12em;
-    height: 11.5em;
+    width: 10em;
+    height: 12.5em;
   }
-
+  .bg h6{
+    font-size: 1em;
+  }
+  .bg strong, span, li{
+    font-size: .7em;
+  }
   .blob {
-    width: 12em;
-    height: 11.5em;
+    width: 11em;
+    height: 12.5em;
   }
 }

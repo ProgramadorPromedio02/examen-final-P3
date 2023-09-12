@@ -84,17 +84,17 @@
 @media (max-width: 400px) {
     .custom-card {
         width: 18.5em;
-        height: 29em;
+        height: 31em;
     }
 
     .bg {
         width: 18em;
-        height: 28.5em;
+        height: 30.5em;
         padding-right: 10px;
     }
 
     .blob {
         width: 10em;
-        height: 20em;
+        height: 25em;
     }
 }

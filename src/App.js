@@ -4,7 +4,7 @@ import ScreenHome from "../src/screen/ScreenHome";
 import ScreenLogin from "../src/screen/ScreenLogin";
 import ScreenRegister from "../src/screen/ScreenRegister";
 import ScreenError from "../src/screen/ScreenError";
-import ScreenVideogames from "../src/screen/ScreenVideogames";
+import ScreenProducts from "../src/screen/ScreenProducts";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route path="/login" element={<ScreenLogin/>}/>
           <Route path="/register" element={<ScreenRegister/>}/>
           <Route path="/error" element={<ScreenError/>}/>
-          <Route path="/Videogames" element={<ScreenVideogames/>}/>          
+          <Route path="/products" element={<ScreenProducts/>}/>          
         </Routes>
       </BrowserRouter>
     </>

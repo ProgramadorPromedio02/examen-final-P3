@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Image, Modal, Button } from "react-bootstrap";
-import logo from "../img/Logotipo(Gomu)Transparente.png";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
+import logo from "../img/logosmall.png";
 import styles from "../styles/LoginDesigne.module.css";
 import CardForm from "../components/CardForm";
 import { Link, useNavigate } from "react-router-dom";
@@ -51,15 +51,15 @@ function ScreenLogin() {
       <CardForm content={
         <Container>
           <Row className="d-flex flex-column">
-            <Col>
+            <Col sm={4}>
               <Link to="/" ><button className="btn btn-primary m-1">Volver Inicio</button></Link>
             </Col>
-            <Col className="text-center">
+            <Col sm={12} className="text-center" >
               <h3>Login</h3>
-              <Image src={logo} className={styles["dimensiones-logo"]} />
+              <img alt="logo" src={logo} className={`mb-2 ${styles['dimensiones-logo']}`}/>
             </Col>
             <br />
-            <Col>
+            <Col sm={12} className="d-flex justify-content-center">
               <form onSubmit={(e) => e.preventDefault()}>
                 <div className="form-group">
                   <label htmlFor="email">UserName</label>
@@ -71,11 +71,10 @@ function ScreenLogin() {
                 </div>
                 <div className="form-group form-check">
                   <input type="checkbox" className="form-check-input" id="check" />
-                  <label className="form-check-label" htmlFor="check">Check me out</label>
                 </div>
               </form>
             </Col>
-            <Col className="d-flex m-2 p-2">
+            <Col className="d-flex mt-4 p-2 justify-content-center">
               <Link to="/register" className=" m-2 ">Registrarme</Link>
               <button type="submit" className="btn btn-primary m-2" onClick={handleLogin}>Iniciar Sesión</button>
             </Col>

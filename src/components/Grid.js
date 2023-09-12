@@ -1,33 +1,29 @@
-import styles from "../styles/GridStyles.module.css";
+import style from "../styles/GridStyles.module.css";
 import Footer from "./Footer";
 import NavbarDesigne from "./NavbarDesigne";
+import Content from "../components/Content";
+import SideBar from "../components/SideBar";
+import CarouselHeader from "../components/CarouselHeader";
 
-function Grid({ header, content, lateral }) {
+function Grid() {
   return (
-
-    <div className={styles["conteinerClass"]}>
-      {/* section 1*/}
-      <div className={styles["navbarConteiner"]}>
+    <div className={style["conteinerClass"]}>
+      <div className={style["navbarConteiner"]}>
         <NavbarDesigne />
       </div>
-      {/* section 2*/}
-      <div className={styles["headerConteiner"]}>
-        {header}
+      <div className={style["headerConteiner"]}>
+        <CarouselHeader />
       </div>
-      {/* section 3*/}
-      <div className={styles["contentConteiner"]}>
-        {content}
+      <div className={style["contentConteiner"]}>
+        <Content />
       </div>
-      {/* section 4*/}
-      <div className={styles["lateralConteiner"]}>
-        {lateral}
+      <div className={style["lateralConteiner"]}>
+        <SideBar />
       </div>
-      {/* section 5*/}
-      <div className={styles["footerConteiner"]}>
+      <div className={style["footerConteiner"]}>
         <Footer />
       </div>
     </div>
   );
 };
-
-export default Grid;
+export default Grid;
