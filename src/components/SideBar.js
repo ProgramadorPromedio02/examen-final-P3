@@ -35,7 +35,7 @@ function SideBar() {
         <CustomCard content={
           <div className="text-center m-1 p-1 ">
             <h6>Algunas de nuestras recomendaciones para un Setup profesional</h6>
-            <Link to="/videogames" className=" m-2 "><button type="submit" className="btn btn-primary m-2 ">Ir a la Tienda</button></Link>
+            <Link to="/products" className=" m-2 "><button type="submit" className="btn btn-primary m-2 ">Ir a la Tienda</button></Link>
           </div>
         } />
       </Col>
