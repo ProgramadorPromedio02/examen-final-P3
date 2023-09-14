@@ -4,48 +4,34 @@ import logo from "../img/logosmall.png";
 import styles from "../styles/LoginDesigne.module.css";
 import CardForm from "../components/CardForm";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useAuth } from "../context/authContext"
+
 
 function ScreenLogin() {
-  const [username, setUsername] = useState("");
+  const auth = useAuth()
+
+  const [emailUser, setEmailUser] = useState("");
   const [passUser, setPassUser] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [loginSuccess, setLoginSuccess] = useState(false);
-
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://fakestoreapi.com/auth/login",
-        {
-          username: username,
-          password: passUser,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (response.status === 200) {
-        setLoginSuccess(true);
-        setShowModal(true);
-        localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-      } else {
-        setLoginSuccess(false);
-        setShowModal(true);
-      }
+      await auth.login(emailUser, passUser);
+      setLoginSuccess(true);
+      setShowModal(true);
+      console.log("Inicio sesión exitoso", emailUser);
     } catch (error) {
-      console.log("error", error);
-      alert("Hubo un error en el proceso de inicio de sesión.");
+      setLoginSuccess(false);
+      setShowModal(true);
     }
-  }
+  };
+
   const modalTitle = loginSuccess ? "Login Exitoso" : "Login Incorrecto";
-  const modalMessage = loginSuccess ? "Usuario/Contraseña correctos. ¿Quieres ir al home?" : "Usuario o contraseña incorrectos. Por favor, inténtelo nuevamente.";
+  const modalMessage = loginSuccess ? "Bienvenido. ¿Quieres ir al home?" : "Usuario o contraseña incorrectos. Por favor, inténtelo nuevamente.";
   return (
     <div className="d-flex justify-content-center">
       <CardForm content={
@@ -56,40 +42,36 @@ function ScreenLogin() {
             </Col>
             <Col sm={12} className="text-center" >
               <h3>Login</h3>
-              <img alt="logo" src={logo} className={`mb-2 ${styles['dimensiones-logo']}`}/>
+              <img alt="logo" src={logo} className={`mb-2 ${styles['dimensiones-logo']}`} />
             </Col>
             <br />
             <Col sm={12} className="d-flex justify-content-center">
               <form onSubmit={(e) => e.preventDefault()}>
                 <div className="form-group">
                   <label htmlFor="email">UserName</label>
-                  <input type="email" className="form-control" id="email" placeholder="Enter email" onChange={(e) => setUsername(e.target.value)} />
+                  <input type="email" className="form-control" id="email" placeholder="Enter email" onChange={(e) => setEmailUser(e.target.value)} />
                 </div>
                 <div className="form-group">
                   <label htmlFor="password">Password</label>
                   <input type="password" className="form-control" id="password" placeholder="Password" onChange={(e) => setPassUser(e.target.value)} />
                 </div>
-                <div className="form-group form-check">
-                  <input type="checkbox" className="form-check-input" id="check" />
-                </div>
               </form>
             </Col>
             <Col className="d-flex mt-4 p-2 justify-content-center">
               <Link to="/register" className=" m-2 ">Registrarme</Link>
-              <button type="submit" className="btn btn-primary m-2" onClick={handleLogin}>Iniciar Sesión</button>
+              <button type="submit" className="btn btn-primary m-2" onClick={(e) => handleLogin(e)}>Iniciar Sesión</button>
             </Col>
           </Row>
           {showModal && (
             <div
               className="modal show"
-
               style={{
-                display: 'block',
-                position: 'fixed',
+                display: "block",
+                position: "fixed",
                 top: 0,
                 left: 0,
-                width: '100%',
-                height: '100%',
+                width: "100%",
+                height: "100%",
                 zIndex: 1050,
               }}
             >
@@ -97,15 +79,14 @@ function ScreenLogin() {
                 <Modal.Header closeButton>
                   <Modal.Title>{modalTitle}</Modal.Title>
                 </Modal.Header>
-
                 <Modal.Body>
-                  <p>{modalMessage}</p>
+                  {modalMessage}
                 </Modal.Body>
 
                 <Modal.Footer>
                   <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
                   {loginSuccess ? (
-                    <Button variant="primary" onClick={() => navigate('/')}>Go to Home</Button>
+                    <Button variant="primary" onClick={() => navigate("/")}>Go to Home</Button>
                   ) : (
                     <Button variant="primary" onClick={() => setShowModal(false)}>OK</Button>
                   )}
@@ -120,3 +101,4 @@ function ScreenLogin() {
 };
 
 export default ScreenLogin;
+
