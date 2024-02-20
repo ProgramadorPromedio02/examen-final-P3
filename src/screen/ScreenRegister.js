@@ -30,10 +30,12 @@ function ScreenRegister() {
     }
   };
 
-  const modalTitle = registerSuccess ? "Registro Exitoso" : "Registro Incorrecto";
+  const modalTitle = registerSuccess
+    ? "Registro Exitoso"
+    : "Registro Incorrecto";
   const modalMessage = registerSuccess
     ? "Nuevo usuario registrado con éxito. ¿Quieres ir a iniciar sesión?"
-    : "Fallo el registro del usuario. Por favor, inténtelo nuevamente.";
+    : "Fallo el registro del usuario. Necesitas poner 8 carácteres en la contraseña como máximo para crear tu cuenta, cómo también cualquier correo @gmail o @hotmail. Por favor, inténtelo nuevamente.";
 
   return (
     <div className="d-flex justify-content-center">
@@ -48,7 +50,11 @@ function ScreenRegister() {
               </Col>
               <Col sm={12} className="text-center">
                 <h3>Register</h3>
-                <img alt="logo" src={logo} className={`mb-2 ${styles["dimensiones-logo"]}`} />
+                <img
+                  alt="logo"
+                  src={logo}
+                  className={`mb-2 ${styles["dimensiones-logo"]}`}
+                />
               </Col>
               <br />
               <Col sm={12} className="d-flex justify-content-center">
@@ -79,7 +85,11 @@ function ScreenRegister() {
                 <Link to="/login" className=" m-2">
                   Iniciar Sesión
                 </Link>
-                <button type="submit" className="btn btn-primary m-2" onClick={(e) => handleRegister(e)}>
+                <button
+                  type="submit"
+                  className="btn btn-primary m-2"
+                  onClick={(e) => handleRegister(e)}
+                >
                   Registrarse
                 </button>
               </Col>
@@ -107,15 +117,24 @@ function ScreenRegister() {
                   </Modal.Body>
 
                   <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShowModal(false)}>
-                      Close
+                    <Button
+                      variant="secondary"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Cerrar
                     </Button>
                     {registerSuccess ? (
-                      <Button variant="primary" onClick={() => navigate("/login")}>
-                        Login
+                      <Button
+                        variant="primary"
+                        onClick={() => navigate("/login")}
+                      >
+                        Registrarse
                       </Button>
                     ) : (
-                      <Button variant="primary" onClick={() => setShowModal(false)}>
+                      <Button
+                        variant="primary"
+                        onClick={() => setShowModal(false)}
+                      >
                         OK
                       </Button>
                     )}

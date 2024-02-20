@@ -1,13 +1,15 @@
 .container-title {
-  width: 70vw;
+  width: auto;
   height: 14em;
-  background: #07182E;
+  background: #07182e;
   position: relative;
   display: flex;
+  justify-content: center;
   place-content: center;
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
+  margin: 10px;
 }
 
 .container-title h2 {
@@ -17,7 +19,7 @@
 }
 
 .container-title::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100vw;
   background-image: linear-gradient(180deg, rgb(17, 0, 255), rgb(48, 172, 255));
@@ -37,9 +39,9 @@
 }
 
 .container-title::after {
-  content: '';
+  content: "";
   position: absolute;
-  background: #07182E;
+  background: #07182e;
   inset: 5px;
   border-radius: 15px;
 }

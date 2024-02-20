@@ -24,15 +24,17 @@
   backdrop-filter: blur(24px);
   border-radius: 10px;
   overflow: hidden;
-  outline: 2px solid  rgba(40, 139, 252, 0.95);
+  outline: 2px solid rgba(40, 139, 252, 0.95);
   padding: 5px;
 }
 
-.bg h6{
+.bg h6 {
   font-size: 1em;
 }
-.bg strong, span, li{
-  font-size: .6em;
+.bg strong,
+span,
+li {
+  font-size: 0.6em;
 }
 
 .blob {
@@ -80,11 +82,13 @@
     width: 13em;
     height: 13.5em;
   }
-  .bg h6{
+  .bg h6 {
     font-size: 1.2em;
   }
-  .bg strong, span, li{
-    font-size: .9em;
+  .bg strong,
+  span,
+  li {
+    font-size: 0.9em;
   }
   .blob {
     width: 12.5em;
@@ -100,11 +104,13 @@
     width: 12em;
     height: 12.5em;
   }
-  .bg h6{
+  .bg h6 {
     font-size: 1.1em;
   }
-  .bg strong, span, li{
-    font-size: .8em;
+  .bg strong,
+  span,
+  li {
+    font-size: 0.8em;
   }
   .blob {
     width: 11.5em;
@@ -121,11 +127,13 @@
     width: 12em;
     height: 12.5em;
   }
-  .bg h6{
+  .bg h6 {
     font-size: 1.2em;
   }
-  .bg strong, span, li{
-    font-size: .9em;
+  .bg strong,
+  span,
+  li {
+    font-size: 0.9em;
   }
   .blob {
     width: 12em;
@@ -141,11 +149,13 @@
     width: 10em;
     height: 12.5em;
   }
-  .bg h6{
+  .bg h6 {
     font-size: 1em;
   }
-  .bg strong, span, li{
-    font-size: .7em;
+  .bg strong,
+  span,
+  li {
+    font-size: 0.7em;
   }
   .blob {
     width: 11em;

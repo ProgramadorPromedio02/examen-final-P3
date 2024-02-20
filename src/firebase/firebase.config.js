@@ -1,4 +1,3 @@
-
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
@@ -8,7 +7,7 @@ const firebaseConfig = {
   projectId: "examenfinal-ee6a7",
   storageBucket: "examenfinal-ee6a7.appspot.com",
   messagingSenderId: "661647267795",
-  appId: "1:661647267795:web:9a2550553f2cb982c48126"
+  appId: "1:661647267795:web:9a2550553f2cb982c48126",
 };
 
 // Initialize Firebase

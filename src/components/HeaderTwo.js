@@ -6,6 +6,6 @@ export default function HeaderTwo() {
       <div className={styles["container-title"]}>
         <h2>Tech Store</h2>
       </div>
-    </>
-  );
-};
+    </>
+  );
+}
